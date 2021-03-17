@@ -8,18 +8,13 @@ import org.springframework.stereotype.Repository;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
 @Repository("RealDB")
 public class RealEntityDB implements EntityDAO {
-//    private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-//    private static LocalDateTime dateTime;
-//    private final String formatter2 = date.format(formatter);
     private final JdbcTemplate jdbcTemplate;
-    private  String s;
     @Autowired
     public RealEntityDB(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
