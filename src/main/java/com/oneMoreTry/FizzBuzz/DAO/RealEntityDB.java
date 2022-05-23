@@ -56,8 +56,6 @@ public class RealEntityDB implements EntityDAO {
     public boolean removeAllEntries() {
 
         final String sql = "DELETE FROM responses_new ";
-
-
         return jdbcTemplate.query(sql, new Object[]{}, (resultSet, i) -> getEntity(resultSet)).isEmpty();
     }
 
